@@ -5,8 +5,8 @@ node{
     stage('Composer')
         sh "composer update"
  stage('DEV'){
-   sh"echo 'a' | sudo php bin/magento cache:clean"
-   sh"echo 'a' | sudo php bin/magento setup:upgrade"
+   sh"echo 'a' | sudo php bin/magento -S cache:clean"
+   sh"echo 'a' | sudo php bin/magento -S setup:upgrade"
  }
  
 
